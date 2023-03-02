@@ -51,9 +51,9 @@ export default {
 <template>
 
   <section>
-      <div class="container">
+      <div class="container-fluid">
 
-        <h1 class="pb-5">Projects list:</h1>
+        <h1 class="pb-5 tracking-in-contract">Projects list:</h1>
 
         <div class="card-wrapper">
           <!--Qui andranno le card-->
@@ -69,6 +69,31 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tracking-in-contract {
+	animation: tracking-in-contract 1s ease-in both;
+}
+
+//aggiungo un'animazione per il titolo//
+ @keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
 
 
 </style>
