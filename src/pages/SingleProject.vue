@@ -13,7 +13,7 @@ export default {
 
     data() {
         return {
-            project: '',
+            project: null,
             loading: false,
             urlAddress: 'http://127.0.0.1:8000/api/projects/',
         }
@@ -27,7 +27,7 @@ export default {
             })
             .then((response) => {
                 //console.log(response.data.results.data);
-                this.projects = response.data.results;
+                this.project = response.data.results;
             })
             .catch(function (error) {
                 console.warn(error);
@@ -48,7 +48,7 @@ export default {
 
             <!--Qui andrà il singolo progetto-->
             <ProjectComponent 
-                :project="projectElement"
+                :project="project"
             />
         </div>
     </section>
