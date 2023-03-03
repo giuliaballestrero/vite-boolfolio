@@ -1,10 +1,12 @@
 <script>
-import AppMain from './components/AppMain.vue';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
 
+  name: 'AppVue',
+
   components: {
-    AppMain,
+    AppHeader,
   }
 }
 
@@ -12,7 +14,10 @@ export default {
 
 <template>
 
-  <AppMain/>
+  <AppHeader/>
+
+  <!-- Aggiungo il componente router view alla struttura principale -->
+  <router-view></router-view>
 
 </template>
 
