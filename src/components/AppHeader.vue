@@ -22,19 +22,19 @@
                     <ul class="navbar-nav text-light">
 
                         <li class="nav-item">
-                            <RouterLink :to="{name:'home'}" class="nav-link active" aria-current="page" href="#">
+                            <RouterLink :to="{name:'home'}" class="nav-link"  :class="this.$route.name === 'home' ? 'active': ''" aria-current="page">
                                 Home
                             </RouterLink>
                         </li>
 
                         <li class="nav-item">
-                            <router-link :to="{name:'projects'}" class="nav-link" href="#">
+                            <router-link :to="{name:'projects'}" class="nav-link" :class="this.$route.name === 'projects' ? 'active': ''">
                                 Projects
                             </router-link>
                         </li>
 
                         <li class="nav-item">
-                            <router-link :to="{name:'about-us'}" class="nav-link" href="#">
+                            <router-link :to="{name:'about-us'}" class="nav-link" :class="this.$route.name === 'about-us' ? 'active': ''">
                                 About Us
                             </router-link> 
                         </li>
@@ -56,6 +56,8 @@ header {
 nav {
     
     a {
+        font-weight: bold;
+        
         img {
             width: 50px;
         }

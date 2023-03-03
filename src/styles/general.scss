@@ -1,5 +1,10 @@
 @import 'bootstrap/scss/bootstrap';
 
+//font
+body {
+  font-family: 'Urbanist', sans-serif;
+}
+
 //aggiungo un'animazione per il titolo//
 .tracking-in-contract {
 	animation: tracking-in-contract 1s ease-in both;
