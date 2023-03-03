@@ -8,7 +8,12 @@
             'project': {
                 type: Object,
                 required: true,
-            }
+            },
+
+            'isShow': {
+                type: Boolean,
+                required: false,
+                default: false,
         },
 
         data () {
@@ -17,6 +22,7 @@
         }
         }
     }
+}
 </script>
 
 <template>
@@ -49,7 +55,7 @@
                 Created on {{ project.creation_date }} - Proj. id: {{ project.slug }}
             </div>
             <div class="pt-2">
-                <router-link :to="{name: 'project', params: {slug: project.slug}}" class="btn btn-dark">
+                <router-link v-if="!isShow" :to="{name: 'project', params: {slug: project.slug}}" class="btn btn-dark">
                     Show more
                 </router-link>
             </div>

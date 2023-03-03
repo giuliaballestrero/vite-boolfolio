@@ -49,6 +49,7 @@ export default {
             <!--Qui andrà il singolo progetto-->
             <ProjectComponent 
                 :project="project"
+                :isShow="true"
             />
         </div>
     </section>
