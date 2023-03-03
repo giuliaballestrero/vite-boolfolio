@@ -1,13 +1,11 @@
 <script>
   //import Axios
   import axios from 'axios';
-  import { store } from '../store.js';
-  //console.log(store); 
 
   //import project component
   import ProjectComponent from './ProjectComponent.vue'; 
 
-export default {
+  export default {
 
   name: 'AppMain',
 
@@ -17,8 +15,6 @@ export default {
 
   data () {
     return {
-      store,
-
       projects: [],
       loading: false,
       urlAddress: 'http://127.0.0.1:8000/api/projects',
@@ -27,7 +23,7 @@ export default {
 
   methods: {
     //create axios call to show laravel projects
-    getprojects () {
+    getProjects () {
       axios.get(this.urlAddress, {
         params: {
           //
@@ -35,12 +31,12 @@ export default {
       })
       .then((response) => {
         //console.log(response.data.results.data);
-        this.store.projectList= response.data.results.data;
+        this.projects= response.data.results.data;
     })   
     }
   },
   created() {
-    this.getprojects();
+    this.getProjects();
   },
     
 }
@@ -59,7 +55,7 @@ export default {
           <!--Qui andranno le card-->
         
           <ProjectComponent 
-            v-for="projectElement in store.projectList" :project="projectElement"
+            v-for="projectElement in projects" :project="projectElement"
           />
         </div>
 
@@ -76,11 +72,11 @@ export default {
   flex-wrap: wrap;
 }
 
+//aggiungo un'animazione per il titolo//
 .tracking-in-contract {
 	animation: tracking-in-contract 1s ease-in both;
 }
 
-//aggiungo un'animazione per il titolo//
  @keyframes tracking-in-contract {
   0% {
     letter-spacing: 1em;

@@ -1,6 +1,6 @@
 import { reactive } from 'vue';
 
-//espemio export
+/*espemio export
 export const store = reactive ({
     projectList : [],
-});
+});*/
