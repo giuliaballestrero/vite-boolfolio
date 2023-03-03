@@ -1,24 +1,27 @@
 <script>
 
-export default {
+    export default {
 
-    name: 'ProjectComponent',
-  
-    props: {
-        project: Object,
-    },
+        name: 'ProjectComponent',
+    
+        props: {
+            'project': {
+                type: Object,
+                required: true,
+            }
+        },
 
-    data () {
-    return {
-
+        data () {
+        return {
+        //
+        }
+        }
     }
-    }
-}
 </script>
 
 <template>
-        <div class="card text-center mb-3 single-card">
-            <h2 class="card-title fw-bold">
+        <div class="card text-center mb-3 single-card p-3">
+            <h2 class="card-title fw-bold pt-2">
                 {{ project.title }}
             </h2>
 

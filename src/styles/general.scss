@@ -1,11 +1,21 @@
 @import 'bootstrap/scss/bootstrap';
 
-//reset
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type:none;
-    
+//aggiungo un'animazione per il titolo//
+.tracking-in-contract {
+	animation: tracking-in-contract 1s ease-in both;
+}
+
+ @keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
 
