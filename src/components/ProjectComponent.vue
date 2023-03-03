@@ -27,7 +27,6 @@
 
             <div class="card-body m-3">
                 
-
                 <img :src="project.thumb" class="img-thumbnail" :alt="project.title">
 
                 <p class="card-text pt-4 mb-4">
@@ -59,16 +58,14 @@
 
 <style lang="scss" scoped>
 
-.single-card {
-    width: calc(100% / 3 - 2rem);
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.card {
     border-radius: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
 
+        img {
+            border-radius: 30px;
+        }
+}
 .card-footer {
     background-color: #aba9ee8d;
     color: white!important;
