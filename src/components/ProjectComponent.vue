@@ -46,9 +46,13 @@
                     </a>  
                 </span>
             </div>
-            
-            <div class="card-footer text-muted">
+            <div class="card-footer border text-muted">
                 Created on {{ project.creation_date }} - Proj. id: {{ project.slug }}
+            </div>
+            <div class="pt-2">
+                <router-link :to="{name: 'project', params: {slug: project.slug}}" class="btn btn-dark">
+                    Show more
+                </router-link>
             </div>
         </div>   
 </template>
